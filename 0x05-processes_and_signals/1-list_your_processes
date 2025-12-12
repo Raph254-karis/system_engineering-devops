@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# displays all running processes in a user-oriented hierarchy, including those without a TTY
+ps -eo user,pid,ppid,cmd --forest
