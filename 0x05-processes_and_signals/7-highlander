@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Runs indefinitely and prints a message when receiving SIGTERM
+# Runs an infinite loop and prints a message when receiving SIGTERM
 
 trap 'echo "I am invincible!!!"' SIGTERM
 
@@ -8,4 +8,5 @@ do
     echo "To infinity and beyond"
     sleep 2
 done
+
 
