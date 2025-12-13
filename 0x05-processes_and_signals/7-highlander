@@ -1,14 +1,7 @@
 #!/usr/bin/env bash
-# Prints a message indefinitely and ignores SIGTERM
-
-handle_sigterm() {
-    echo "I am invincible!!!"
-}
-
-trap handle_sigterm SIGTERM
-
-while true
-do
-    echo "To infinity and beyond"
-    sleep 2
+# Infinite loop that displays a message and handles SIGTERM gracefully.
+trap 'echo "I am invincible!!!"' SIGTERM
+while true; do
+  echo "To infinity and beyond"
+  sleep 2
 done
