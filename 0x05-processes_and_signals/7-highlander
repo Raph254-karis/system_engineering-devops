@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
-# This script prints a message indefinitely and handles SIGTERM
+# Prints a message indefinitely and ignores SIGTERM
 
-trap 'echo "I am invincible!!!"' SIGTERM
+handle_sigterm() {
+    echo "I am invincible!!!"
+}
+
+trap handle_sigterm SIGTERM
 
 while true
 do
