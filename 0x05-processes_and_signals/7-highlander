@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
-# Displays a message indefinitely and prints OK when receiving SIGTERM
+# This script prints a message indefinitely and handles SIGTERM
 
-trap 'echo "OK"' SIGTERM
+trap 'echo "I am invincible!!!"' SIGTERM
 
 while true
 do
     echo "To infinity and beyond"
     sleep 2
 done
-
-
-
